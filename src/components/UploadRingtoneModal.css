@@ -1,0 +1,276 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(41, 34, 47, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.modal-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 26px;
+  width: 100%;
+  max-width: 440px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(41, 34, 47, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-header-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #f2ecfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #29222f;
+  margin: 0;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b6478;
+}
+
+.modal-input {
+  border: 1px solid #eee7fb;
+  background: #f8f6fd;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 13px;
+  color: #29222f;
+  outline: none;
+}
+
+.modal-input:focus {
+  border-color: #c4a4f6;
+  background: #ffffff;
+}
+
+/* Dropzone */
+.dropzone {
+  border: 1.5px dashed #d9cdf6;
+  border-radius: 12px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  background: #faf8fe;
+  text-align: center;
+}
+
+.dropzone:hover {
+  background: #f5f1fc;
+}
+
+.dropzone-icon {
+  display: flex;
+}
+
+.dropzone-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #29222f;
+}
+
+.dropzone-subtext {
+  font-size: 11px;
+  color: #9791a3;
+}
+
+/* Uploaded file list */
+.uploaded-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.uploaded-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid #eee7fb;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.uploaded-play-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 20%;
+  border: none;
+  background: #D3D3D3;
+  color: #6d28d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  outline: none;  
+}
+
+.uploaded-play-button-active {
+  background: #6d28d9;
+  color: #ffffff;
+}
+
+.uploaded-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  flex: 1;
+  min-width: 0;
+}
+
+.uploaded-name {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  text-align:left;
+  color: #2D1B4E;
+}
+
+.uploaded-item-playing .uploaded-name {
+  color: #ffffff;
+}
+
+.uploaded-duration {
+  text-align:left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8A7A9E;
+}
+
+.uploaded-warning {
+  font-size: 11px;
+  color: #ef4444;
+}
+
+.uploaded-item-playing .uploaded-warning {
+  color: #fecaca;
+}
+
+.uploaded-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.uploaded-time {
+  font-size: 10px;
+  color: #e4d9fb;
+  flex-shrink: 0;
+}
+
+.uploaded-progress-track {
+  flex: 1;
+  height: 4px;
+  background: #efe9fb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.uploaded-progress-fill {
+  height: 100%;
+  background: #6d28d9;
+  border-radius: 4px;
+}
+
+.uploaded-item-playing .uploaded-name {
+  color: #2D1B4E;
+}
+
+.uploaded-time {
+  color: #8A7A9E;
+}
+
+
+.uploaded-remove {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.uploaded-remove:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.uploaded-item-playing .uploaded-remove:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.btn {
+  flex: 1;
+  padding: 11px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-plain {
+  background: #f3f0fa;
+  color: #6b6478;
+}
+
+.btn-plain:hover {
+  background: #ece7f7;
+}
+
+.btn-primary {
+  background: #7C3AED;
+  color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #5b21b6;
+}

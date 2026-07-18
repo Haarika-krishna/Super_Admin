@@ -1,0 +1,332 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 16px;
+  
+}
+
+.dashboard-title {
+  font-family: 'Nunito', sans-serif;
+  text-align:left;
+  font-size: 24px;
+  font-weight: 800;
+  color: #29222f;
+  margin: 0;
+}
+
+/* Stat cards — text stacked on the left, icon on the right */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(109, 40, 217, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stat-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #8A7A9E;
+}
+
+.stat-value {
+  text-align:left;
+  font-size: 30px;
+  font-weight: 800;
+  color: #2D1B4E;
+}
+
+.stat-trend {
+  font-size: 12px;
+  font-weight:600;
+  color: #7C3AED;
+  display:flex;
+  align-items: center;
+  gap:5px;
+}
+
+.stat-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #f2ecfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Shared panel */
+.panel {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(109, 40, 217, 0.06);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.panel-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #2D1B4E;
+  margin: 0;
+}
+
+.view-all {
+  font-size: 13px;
+  color: #6d28d9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Mid grid: growth + quick actions */
+.mid-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Usage & Growth panel */
+.growth-panel {
+  padding: 14px;
+}
+.growth-section{
+  padding:10px;
+  border:1px solid #F0E7FFCC;
+  border-radius:12px;
+  background: #F1ECF933;
+}
+
+.growth-subheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.growth-subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #8A7A9E;
+}
+
+.growth-select {
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1.5px solid #e5ddf7;
+  border-radius: 999px;
+  padding: 8px 34px 8px 16px;
+  color: #8A7A9E;
+  background: #ffffff
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6' fill='none' stroke='%236b6478' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>")
+    no-repeat right 14px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+.table-avatar-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bar chart — fatter bars, shorter chart height */
+.growth-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  height: 160px;
+  padding-top: 16px;
+}
+
+.growth-bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.growth-bar-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #29222f;
+  margin-bottom: 8px;
+}
+
+.growth-bar {
+  width: 60px;
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(180deg, #c4a4f6 0%, #6d28d9 100%);
+  min-height: 6px;
+}
+
+.growth-bar-day {
+  font-size: 10px;
+  color: #8A7A9E;
+  margin-top: 10px;
+}
+
+/* Quick Actions panel */
+.actions-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px;
+}
+
+.actions-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-align:left;
+  color: #2d1b4e;
+  margin: 0;
+}
+
+.actions-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #6d28d9;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #5b21b6;
+}
+
+.btn-outline {
+  background: #FCFAFF;
+  color: #7C3AED;
+  border-color: #7C3AED;
+}
+
+.btn-outline:hover {
+  background: #f5f1fc;
+}
+
+.btn-ghost {
+  background: #ffffff;
+  color: #29222f;
+  border: 1px solid #F0E7FF !important;
+}
+
+.btn-ghost:hover {
+  background: #f8f6fd;
+}
+
+/* Tables */
+.table-panel {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table thead tr {
+  background: #f8f6fd;
+}
+
+.data-table th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  color: #9791a3;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.data-table td {
+  text-align:left;
+  padding: 10px;
+  font-size: 13px;
+  color: #29222f;
+  border-bottom: 1px solid #f3effa;
+}
+
+.cell-name {
+  font-weight: 600;
+}
+
+.cell-muted {
+  color: #6b6478;
+}
+
+.table-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #29222f;
+}
+
+.view-link {
+  color: #6d28d9;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+  .mid-grid {
+    grid-template-columns: 1fr;
+  }
+}

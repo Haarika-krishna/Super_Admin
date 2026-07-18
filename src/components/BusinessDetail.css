@@ -1,0 +1,397 @@
+.business-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left:15px;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #29222f;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.back-link:hover {
+  color: #6d28d9;
+}
+
+/* Cover image */
+.cover-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 240px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cover-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 24px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cover-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cover-name {
+  color:#FFFFFF;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: 'Hanken Grotesk', sans-serif;
+  margin: 0;
+}
+
+.verified-badge {
+  flex-shrink: 0;
+}
+
+.cover-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.cover-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color:#FFFFFF;
+  font-size:16px;
+  font-weight:800;
+}
+
+.section-icon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+}
+
+/* Stat row */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-box {
+  background: #ffffff;
+  border: 1px solid #F0E7FF;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-box-label {
+  font-size: 12px;
+  font-family:'Hanken Grotesk', sans-serif;
+  font-weight:600;
+  text-align:left;
+  color: #8A7A9E;
+}
+
+.stat-box-value {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+  color: #2D1B4E;
+}
+
+/* Panels — all 6 in one 3-column grid (2 rows of 3) */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.detail-panel {
+  background: #ffffff;
+  border: 1px solid #eee7fb;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2D1B4E;
+  margin: 0;
+}
+
+/* Contact info */
+.info-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.info-label {
+  text-align:left;
+  font-size: 12px;
+  color: #8A7A9E;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2D1B4E;
+  text-align: left;
+}
+.info-val {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2D1B4E;
+  text-align: left;
+}
+
+.info-link {
+  color: #6d28d9;
+}
+
+/* Queue settings */
+.queue-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  text-align:left;
+  background: #f8f6fd;
+  border-radius: 10px;
+}
+
+.queue-field-icon {
+  color: #9791a3;
+  font-size: 16px;
+}
+
+/* Token analytics chart */
+.analytics-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  height: 260px;
+  padding-top: 10px;
+}
+
+.analytics-bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.analytics-bar {
+  width: 100%;
+  max-width: 40px;
+  border-radius: 8px 8px 0 0;
+  background: #4648D433;
+  min-height: 6px;
+}
+.analytics-bar-day {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8a7a9e;
+  margin-top: 14px;
+}
+
+/* Operating hours */
+.hours-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 0;
+}
+
+.hours-days {
+  color: #6b6478;
+}
+
+.hours-time {
+  font-weight: 700;
+  color: #6d28d9;
+}
+
+/* Service tags */
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-tag {
+  background: #4648D41A;
+  color: #4648D4;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* Peak Hours */
+.peak-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.peak-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.peak-range {
+  font-size: 12px;
+  color: #6b6478;
+}
+
+.peak-level {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.peak-level-high {
+  color: #ef4444;
+}
+
+.peak-level-medium {
+  color: #f59e0b;
+}
+
+.peak-track {
+  height: 6px;
+  background: #f0eaf9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.peak-fill {
+  height: 100%;
+  background: #6d28d9;
+  border-radius: 4px;
+}
+
+/* Footer actions */
+.detail-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.detail-footer-right {
+  display: flex;
+  gap: 10px;
+}
+
+.butn {
+  padding: 12px !important;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.butn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.deactivate-business-btn {
+  background: #ffffff;
+  color: #BA1A1A;
+  border: 1px solid #BA1A1A !important;
+  width: 180px !important;
+  flex: 0 0 220px !important;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.btn-danger-outline:hover {
+  background: #fef2f2;
+}
+
+.btn-plain {
+  background: #f3f0fa;
+  color:#2D1B4E !important;
+}
+
+.btn-plain:hover {
+  background: #ece7f7;
+}
+
+.btn-primary {
+  background: #6d28d9;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #5b21b6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stat-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .stat-row {
+    grid-template-columns: 1fr;
+  }
+  .detail-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .detail-footer-right {
+    justify-content: stretch;
+  }
+  .detail-footer-right .btn {
+    flex: 1;
+    justify-content: center;
+  }
+}

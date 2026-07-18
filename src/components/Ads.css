@@ -1,0 +1,283 @@
+.ads-page {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 16px;
+}
+
+.ads-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ads-title {
+  color:#2D1B4E;
+  font-size:24px;
+  font-weight:800;
+  font-family:'Nunito', sans-serif;
+  margin: 0 !important;
+  text-align: left;
+}
+
+.add-campaign-button {
+  background: #7C3AED;
+  color: #ffffff;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.add-campaign-button:hover {
+  background: #5b21b6;
+}
+
+.ads-subtitle {
+  font-size: 16px;
+  color: #8A7A9E;
+  margin: 4px 0 20px 0;
+  text-align: left;
+}
+
+.ads-subtitle-strong {
+  font-weight: 700;
+  color: #29222f;
+}
+
+/* 2 cards per row, each using the detailed card structure */
+.ads-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.ad-card {
+  background: #ffffff;
+  border: 1px solid #eee7fb;
+  border-radius: 20px;
+  padding: 12px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Top row: thumbnail image on the left, badge + icons in the empty space on the right */
+.ad-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+}
+.ad-image-wrap {
+  position: relative;
+  flex: 0 1 45%;
+  height: 130px;
+  border-radius: 14px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.ad-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ad-preview-label {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 2px 5px;
+  border-radius: 8px;
+}
+
+.ad-card-top-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 6px;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.ad-status-badge {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0px 10px;
+  border-radius: 20px;
+}
+
+.ad-status-running {
+  background: #dcfce7;
+  color: #16a34a;
+  border: 1px solid #D0FAE5 !important;
+}
+
+.ad-status-paused {
+  background: #f1eef7;
+  color: #6b6478;
+}
+
+.ad-image-actions {
+  display: flex;
+  gap: 0px;
+  background: #F1ECF966;
+  border-radius: 20px;
+  padding:0px 5px;
+}
+
+.ad-icon-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding:2px;
+}
+
+.ad-icon-button:hover {
+  background: #e9e3f5;
+}
+
+.ad-icon-danger {
+  color: #ef4444;
+}
+
+/* Body: title, meta, metrics box */
+.ad-body {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.ad-title {
+  font-size: 14px !important;
+  font-weight: 800;
+  color: #2D1B4E;
+  margin: 0  !important;
+}
+
+.ad-meta {
+  font-size: 12px;
+  color: #8A7A9E;
+  margin: 0 0 10px 0;
+}
+
+.ad-meta-strong {
+  color: #29222f;
+  font-weight: 700;
+}
+
+.ad-meta-link {
+  color: #7C3AED;
+  font-weight: 500;
+}
+
+.ad-metrics {
+  background: #f5f2fc;
+  border-radius: 14px;
+  padding: 4px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ad-metrics-label {
+  font-size: 12px;
+  color: #8A7A9E;
+  font-weight: 700;
+}
+
+.ad-metrics-values {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ad-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.ad-metric-label {
+  font-size: 11px;
+  color: #9791a3;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.ad-metric-label-ctr{
+  color:#7C3AED;
+  font-size:11px;
+  font-weight:700;
+}
+
+.ad-metric-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2d1b4e;
+}
+
+.ad-metric-ctr {
+  text-align:right;
+  background: #F3E8FF;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.ad-metric-ctr .ad-metric-value {
+  color: #6d28d9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ads-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .ad-card-top {
+    flex-direction: column;
+  }
+
+  .ad-image-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ad-card-top-right {
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .ad-metrics {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .ads-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
