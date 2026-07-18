@@ -1,4 +1,3 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
 import Layout from "./components/Layout";
@@ -8,11 +7,11 @@ import RingtoneSettings from "./components/RingtoneSettings";
 import BusinessDetail from "./components/BusinessDetail"
 import Ads from "./components/Ads";
 import Reports from "./components/Reports";
-import { HashRouter } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="/dashboard" replace />} />
@@ -25,7 +24,7 @@ function App() {
           <Route path="reports" element={<Reports />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+   
   );
 }
 
