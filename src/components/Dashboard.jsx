@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 const statCards = [
@@ -160,6 +161,7 @@ const TrendIcon = () => (
 );
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [range, setRange] = useState("Week");
   const maxValue = Math.max(...growthData.map((d) => d.value));
 
@@ -218,13 +220,13 @@ const Dashboard = () => {
         <div className="panel actions-panel">
           <h2 className="actions-title">Quick Actions</h2>
           <div className="actions-buttons">
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={() => navigate("/ringtone")}>
               <PlusCircleIcon /> Add Ringtone
             </button>
-            <button className="btn btn-outline">
+            <button className="btn btn-outline" onClick={() => navigate("/ads")}>
               <MegaphoneIcon /> Create Ad
             </button>
-            <button className="btn btn-ghost">
+            <button className="btn btn-ghost" onClick={() => navigate("/users")}>
               <UsersIcon /> View Users
             </button>
           </div>

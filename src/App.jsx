@@ -7,7 +7,8 @@ import BusinessUsers from "./components/BusinessUsers";
 import RingtoneSettings from "./components/RingtoneSettings";
 import BusinessDetail from "./components/BusinessDetail"
 import Ads from "./components/Ads";
-import Reports from "./components/Reports"
+import Reports from "./components/Reports";
+import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
