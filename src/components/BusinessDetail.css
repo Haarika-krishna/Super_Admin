@@ -395,3 +395,53 @@
     justify-content: center;
   }
 }
+
+/* Additional tablet/mobile refinements for the cover image, panels, and charts */
+@media (max-width: 1024px) {
+  .business-detail-page {
+    padding-left: 4px;
+  }
+
+  .cover-card {
+    height: 200px;
+  }
+
+  .cover-name {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cover-card {
+    height: 170px;
+  }
+
+  .cover-name {
+    font-size: 20px;
+  }
+
+  .cover-meta-item {
+    font-size: 13px;
+  }
+
+  .cover-overlay {
+    padding: 14px 16px;
+  }
+
+  .detail-panel {
+    padding: 14px;
+  }
+
+  .panel-title {
+    font-size: 16px;
+  }
+
+  .analytics-chart {
+    height: 160px;
+    gap: 8px;
+  }
+
+  .analytics-bar-day {
+    font-size: 12px;
+  }
+}

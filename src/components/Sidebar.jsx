@@ -65,15 +65,26 @@ const menuItems = [
   { label: "Settings", path: "/settings", icon: icons.settings },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, onClose }) => {
   return (
-    <aside className="sidebar">
+    <>
+      {isOpen && <div className="sidebar-backdrop" onClick={onClose} />}
+      <aside className={"sidebar" + (isOpen ? " sidebar-open" : "")}>
+        <div className="sidebar-mobile-header">
+          <span className="sidebar-mobile-title">Menu</span>
+          <button className="sidebar-close-btn" onClick={onClose} aria-label="Close menu">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </button>
+        </div>
       <nav className="sidebar-nav">
         <ul className="sidebar-list">
           {menuItems.map((item) => (
             <li key={item.label}>
               <NavLink
                 to={item.path}
+                onClick={onClose}
                 className={({ isActive }) =>
                   "sidebar-link" + (isActive ? " sidebar-link-active" : "")
                 }
@@ -85,7 +96,8 @@ const Sidebar = () => {
           ))}
         </ul>
       </nav>
-    </aside>
+      </aside>
+    </>
   );
 };
 

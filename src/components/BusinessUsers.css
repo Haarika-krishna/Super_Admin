@@ -247,3 +247,31 @@ body{
     max-width: none;
   }
 }
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .business-users-panel {
+    padding: 12px;
+  }
+}
+
+/* Mobile fine-tuning (grid columns already handled above) */
+@media (max-width: 640px) {
+  .business-users-title {
+    font-size: 19px;
+    padding-left: 4px;
+  }
+
+  .business-filter {
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .business-filter-select {
+    flex: 1;
+  }
+
+  .business-card {
+    padding: 14px;
+  }
+}

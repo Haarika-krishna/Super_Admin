@@ -274,3 +274,28 @@
 .btn-primary:hover:not(:disabled) {
   background: #5b21b6;
 }
+
+/* Mobile fine-tuning for the Upload Ringtone modal */
+@media (max-width: 480px) {
+  .modal-backdrop {
+    padding: 12px;
+  }
+
+  .modal-card {
+    padding: 18px;
+    border-radius: 14px;
+    gap: 14px;
+  }
+
+  .modal-title {
+    font-size: 15px;
+  }
+
+  .uploaded-item {
+    flex-wrap: wrap;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+}

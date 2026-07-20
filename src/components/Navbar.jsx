@@ -1,12 +1,23 @@
 import React from "react";
 import "./Navbar.css";
+import logo from "../assets/Group-8.png"
 
-const Navbar = ({ adminName = "Admin Profile", adminEmail = "admin@vixly.com" }) => {
+const Navbar = ({ adminName = "Admin Profile", adminEmail = "admin@vixly.com", onMenuClick }) => {
   return (
     <header className="navbar">
       <div className="navbar-left">
-        <span className="navbar-logo-icon">🐦</span>
-        <span className="navbar-logo-text">Whistlez</span>
+        <button className="navbar-hamburger" onClick={onMenuClick} aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+        </button>
+        <span className="navbar-logo-icon"><img src={logo} alt="logo" /></span>
+        <span className="navbar-logo-text"></span>
       </div>
 
       <div className="navbar-right">

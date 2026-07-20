@@ -204,3 +204,24 @@
 .btn-primary:hover:not(:disabled) {
   background: #5b21b6;
 }
+
+/* Mobile fine-tuning for the New Ad/Campaign modal */
+@media (max-width: 480px) {
+  .ad-modal-backdrop {
+    padding: 12px;
+  }
+
+  .ad-modal-card {
+    padding: 16px;
+    border-radius: 14px;
+    gap: 12px;
+  }
+
+  .ad-modal-title {
+    font-size: 16px;
+  }
+
+  .ad-modal-actions {
+    flex-direction: column;
+  }
+}

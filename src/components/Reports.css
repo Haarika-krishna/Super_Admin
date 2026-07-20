@@ -89,3 +89,18 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Mobile fine-tuning */
+@media (max-width: 480px) {
+  .reports-page {
+    padding-left: 4px;
+  }
+
+  .reports-title {
+    font-size: 19px;
+  }
+
+  .report-card {
+    padding: 16px;
+  }
+}

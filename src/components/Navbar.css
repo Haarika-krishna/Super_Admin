@@ -19,6 +19,25 @@
   gap: 8px;
 }
 
+.navbar-hamburger {
+  display: none; /* shown only on tablet/mobile below */
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  color: #6b6478;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+.navbar-hamburger:hover {
+  background: #f5f1fc;
+}
+
 .navbar-logo-icon {
   font-size: 20px;
 }
@@ -97,4 +116,45 @@
   justify-content: center;
   font-size: 13px;
   font-weight: 600;
+}
+
+/* Tablet and mobile — show hamburger, tighten spacing, hide email under the name
+   so the header doesn't get cramped on narrow screens. */
+@media (max-width: 1024px) {
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar-logo-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-logo-icon img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-logo-icon img {
+    width: 100px; /* Meeku nachina size pettukovachu */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .navbar-profile-text {
+    display: none;
+  }
+
+  .navbar-logo-text {
+    display: none;
+  }
 }

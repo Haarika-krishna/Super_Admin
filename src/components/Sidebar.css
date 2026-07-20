@@ -61,3 +61,72 @@
 .sidebar-label {
   white-space: nowrap;
 }
+
+/* Mobile-only header inside the drawer (title + close X) — hidden on desktop */
+.sidebar-mobile-header {
+  display: none;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+/* Tablet and mobile — sidebar becomes an off-canvas drawer that slides in from
+   the left, triggered by the hamburger button in the navbar. */
+@media (max-width: 1024px) {
+  .sidebar {
+    top: 0;
+    height: 100vh;
+    width: 270px;
+    max-width: 80vw;
+    padding-top: 0;
+    box-shadow: 0 0 30px rgba(41, 34, 47, 0.18);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 1000;
+  }
+
+  .sidebar-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 14px;
+    border-bottom: 1px solid #eee7fb;
+    margin-bottom: 12px;
+  }
+
+  .sidebar-mobile-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #29222f;
+  }
+
+  .sidebar-close-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    color: #6b6478;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .sidebar-close-btn:hover {
+    background: #f5f1fc;
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(41, 34, 47, 0.45);
+    z-index: 999;
+  }
+}

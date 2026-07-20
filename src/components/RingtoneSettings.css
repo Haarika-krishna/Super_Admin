@@ -257,3 +257,39 @@
     gap: 12px;
   }
 }
+/* Tablet */
+@media (max-width: 1024px) {
+  .ringtone-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .ringtone-title {
+    font-size: 19px;
+    padding-left: 4px;
+  }
+
+  .ringtone-card {
+    padding: 14px;
+  }
+
+  .ringtone-icon-wrap {
+    width: 46px;
+    height: 46px;
+  }
+
+  .ringtone-name {
+    font-size: 14px;
+  }
+
+  .ringtone-bottom {
+    flex-wrap: wrap;
+  }
+
+  .play-progress {
+    order: 3;
+    width: 100%;
+  }
+}

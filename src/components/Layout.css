@@ -8,3 +8,18 @@
   margin-left: 220px; /* sidebar width */
   padding: 28px 15px;
 }
+
+/* Tablet and mobile — sidebar becomes an off-canvas drawer (see Sidebar.css),
+   so the content no longer reserves permanent left space for it. */
+@media (max-width: 1024px) {
+  .app-content {
+    margin-left: 0;
+    padding: 22px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-content {
+    padding: 16px 12px;
+  }
+}

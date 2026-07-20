@@ -281,3 +281,30 @@
     gap: 12px;
   }
 }
+
+/* Additional mobile fine-tuning */
+@media (max-width: 480px) {
+  .ads-page {
+    padding-left: 4px;
+  }
+
+  .ads-title {
+    font-size: 19px;
+  }
+
+  .ads-subtitle {
+    font-size: 13px;
+  }
+
+  .ad-card {
+    padding: 10px;
+  }
+
+  .ad-metrics-values {
+    gap: 10px;
+  }
+
+  .ad-metric-value {
+    font-size: 15px;
+  }
+}

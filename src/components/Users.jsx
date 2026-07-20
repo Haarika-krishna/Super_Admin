@@ -153,32 +153,34 @@ const Users = () => {
           </div>
         </div>
 
-        <table className="users-table">
-          <thead>
-            <tr>
-              <th>S.NO</th>
-              <th>PROFILE</th>
-              <th>NAME</th>
-              <th>EMAIL</th>
-              <th>PHONE NUMBER</th>
-              <th>JOINED</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredUsers.map((user) => (
-              <tr key={user.sno}>
-                <td>{user.sno}</td>
-                <td>
-                  <Avatar avatar={user.avatar} name={user.name} />
-                </td>
-                <td className="cell-name">{user.name}</td>
-                <td className="cell-muted">{user.email}</td>
-                <td className="cell-muted">{user.phone}</td>
-                <td className="cell-muted">{user.joined}</td>
+        <div className="users-table-wrap">
+          <table className="users-table">
+            <thead>
+              <tr>
+                <th>S.NO</th>
+                <th>PROFILE</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE NUMBER</th>
+                <th>JOINED</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {filteredUsers.map((user) => (
+                <tr key={user.sno}>
+                  <td>{user.sno}</td>
+                  <td>
+                    <Avatar avatar={user.avatar} name={user.name} />
+                  </td>
+                  <td className="cell-name">{user.name}</td>
+                  <td className="cell-muted">{user.email}</td>
+                  <td className="cell-muted">{user.phone}</td>
+                  <td className="cell-muted">{user.joined}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="users-pagination">
           <button
